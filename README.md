@@ -13,7 +13,9 @@ tempos t0;   // cré la tempo t0
 utililisation :
 
 *définir la durée de la tempo en seconde :
+
 set(float val) 
+
 ex:  t0.set(1.5);  // donne la durée de la tempo
 
 *démarrer la tempo pour la première fois ou aprés une pause:
