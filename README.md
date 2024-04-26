@@ -12,33 +12,40 @@ tempos t0;   // cré la tempo t0
 
 utililisation :
 
-- définir la durée de la tempo en seconde :
-set(float val) 
-ex:  t0.set(1.5);  // donne la durée de la tempo
+*définir la durée de la tempo en seconde :
+  set(float val) 
+  ex:  t0.set(1.5);  // donne la durée de la tempo
 
-- démarrer la tempo pour la première fois ou aprés une pause:
-start()
-ex: t0.start();  // démarre la tempo de 1.5 secondes
+*démarrer la tempo pour la première fois ou aprés une pause:
+  start()
+  ex: t0.start();  // démarre la tempo de 1.5 secondes
 
-start(float val)
-ex: t0.start(2.6);  // démarre la tempo de 2.6 secondes
+*start(float val)
+  ex: t0.start(2.6);  // démarre la tempo de 2.6 secondes
 
-- arrêt de la tempo
-stop()
-ex: t0.stop(); // stope la tenpo comme si elle est écoulée ok() passe à true
+*arrêt de la tempo
+  stop()
+  ex: t0.stop(); // stope la tenpo comme si elle est écoulée ok() passe à true
 
-- met en pause la tempo
-pause()
-ex: t0.pause(); // suspend la tempo, pour la redémarrer faire .start()
+*met en pause la tempo
+  pause()
+  ex: t0.pause(); // suspend la tempo, pour la redémarrer faire .start()
 
-- lecture de l'état de la tempo
-ok()
-ex:
-if ( t0.ok() ) {  }
+*lecture de l'état de la tempo
+  ok()
+  ex: if ( t0.ok() ) {  }
 
-exemple Blink:
+*lecture du temps qui reste  
+  val()
+  ex: temps_restant = t0.val();
 
-// Blink 
+*savoir si la tempo est en marche ou arret
+  run
+  ex: if(t0.run) Serial.println("tempo en marche"); else Serial.println("tempo en stop");
+  
+////////////////////////////////////////////////////
+//                  exemple Blink:
+/////////////////////////////////////////////////////
 // fifi82 2024
 
 #include <tempos.h>
