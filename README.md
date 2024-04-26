@@ -39,16 +39,21 @@ if ( t0.ok() ) {  }
 exemple Blink:
 
 // Blink 
-#define p_led 13
+// fifi82 2024
+
+#include <tempos.h>
+
 tempos t0;  // création de la tempo t0
 
 void setup() {
+  Serial.begin(9600);     // démarre le port série
   pinMode(LED_BUILTIN, OUTPUT); // pin 13 pour la led des arduino uno ou nano
   t0.start(0.5);          // règle la tempo à 500 ms et la démarre
 }
 
 void loop() {
   if( t0.ok() ) {         // si la tempo est écoulée     
+    Serial.println("fin tempo"); // affiche "fin tempo"
     digitalWrite( LED_BUILTIN, !digitalRead(LED_BUILTIN) ); // inverse l'état de la led
     t0.start();           // redémarre la tempo    
   }
