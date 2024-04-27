@@ -1,9 +1,9 @@
-# arduino-tempo
-arduino tempo
+# arduino-tempos
+arduino tempos
 
 
-classe pour créer des temporisations rapidement
-
+classe pour créer des temporisations rapidement pour arduino<br>
+la classe utilise millis() de arduino.h<br>
 les commandes :
 
 création d'un objet tempo :
